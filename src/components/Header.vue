@@ -3,7 +3,7 @@
     <header class="header">
         <h1 class="heading-primary">
             <span class="heading-primary--main">Photography</span>
-            <span class="heading-primary--sub">John Words</span>
+            <span class="heading-primary--sub">John Papalexis</span>
         </h1>
 
         <nav class="navigation">

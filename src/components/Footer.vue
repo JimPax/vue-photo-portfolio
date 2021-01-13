@@ -8,8 +8,10 @@
             </ul>
         </nav>
         <div class="footer__logo-box">
-            <div class="footer__logo"></div>
-            <h2 class="footer__heading">John Words</h2>
+            <!-- <div class="footer__logo"> -->
+                <img src="../assets/img/logo.png" class="footer__logo" alt="">
+            <!-- </div> -->
+            <h2 class="footer__heading">John Papalexis</h2>
         </div>
         <p class="footer__copyright">
             &copy; 2021 created by <a href="https://jimpax.netlify.app/" class="footer__link">Jim Pax</a>.
