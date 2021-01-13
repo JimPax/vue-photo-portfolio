@@ -1,0 +1,29 @@
+{
+    "categories":[
+        {
+            "name": "art",
+            "img": "g1.jpg",
+            "alt": "description"
+        },
+        {
+            "name": "street",
+            "img": "g2.jpg",
+            "alt": "description"
+        },
+        {
+            "name": "landscape",
+            "img": "g3.jpg",
+            "alt": "description"
+        },
+        {
+            "name": "portrait",
+            "img": "g4.jpg",
+            "alt": "description"
+        },
+        {
+            "name": "commercial",
+            "img": "g5.jpg",
+            "alt": "description"
+        }
+    ]
+}

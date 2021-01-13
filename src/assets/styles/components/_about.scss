@@ -1,0 +1,133 @@
+.about {
+    width: 100%;
+    padding-top: 15rem;
+    padding-bottom: 6rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond(phone) {
+        flex-direction: column;
+        padding-top: 4rem;
+    }
+    &__heading {
+        flex: 0 0 20%;
+        color: $color-black;
+        font-family: "Lato";
+        font-size: 10rem;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg) translateY(100rem);
+        display: inline;
+
+        @include respond(phone) {
+            flex: 0 0 100%;
+            writing-mode: unset;
+            transform: translateY(-50rem);
+            padding-bottom: 2rem;
+            font-size: 6rem;
+        }
+    }
+
+    &__selfie {
+        flex: 0 0 20%;
+        transform: translateX(-100rem);
+        &-img {
+            width: 35rem;
+            box-shadow: -3rem -3rem 1px $color-black;
+            @include respond(phone) {
+                clip-path: polygon(54% 0, 0 74%, 100% 100%);
+            }
+        }
+    }
+
+    &__text {
+        flex: 0 0 55%;
+        max-width: 35%;
+        padding-right:5rem;
+        padding-left:5rem;
+        margin-right: auto;
+        font-family: "Roboto";
+        font-size: 1.6rem;
+        color: $color-white;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        transform: translateX(100rem);
+        background-color: $color-black;
+        @include respond(phone) {
+            max-width: 100%;
+            padding: 5rem;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+    }
+
+    &__design-line {
+        position: absolute;
+        top: 10rem;
+        right: 0;
+        width: 20%;
+        height: .5rem;
+        box-shadow: 0 0 6px $color-black;
+        background-color: $color-black;
+        border-color: $color-black;
+        transform: translateX(100rem);
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    &__heading.animate{
+        animation: slide-in-heading 1.5s ease forwards;
+    }
+    &__selfie.animate,
+    &__text.animate {
+        animation: slide-in 1.5s ease forwards;
+    }
+    &__design-line.animate {
+        animation: slide-in 2s ease forwards;
+    }
+
+}
+
+.bg {
+    margin-bottom: -.4rem;
+    filter: drop-shadow( 0 0 2rem rgb(0, 0, 0));
+}
+
+@keyframes slide-in {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-heading {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(180deg) translateX(0);
+        opacity: 1;
+        
+    }
+}
+
+@include respond(phone) {
+    @keyframes slide-in-heading {
+        0%{
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+            
+        }
+    } 
+}

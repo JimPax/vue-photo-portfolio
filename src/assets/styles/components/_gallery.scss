@@ -1,0 +1,110 @@
+.gallery {
+    &__heading {
+        flex-basis: 100%;
+        margin-top: 5rem;
+        text-align: center;
+        color: $color-black;
+        font-family: "Lato";
+        font-size: 10rem;
+        text-shadow: 0 0 2rem #00000046;
+        background-image: linear-gradient(to right, $color-black,$color-white,$color-white, $color-black);
+
+        @include respond(phone) {
+            font-size: 6rem;
+            
+        }
+    }
+    &__btn-box {
+        position: relative;
+        top: 5rem;
+        left: 7rem;
+        display: inline;
+        @include respond(tab-land) {
+            left: 1.5rem;            
+        }
+    }
+
+    &__back-btn:link,
+    &__back-btn:visited {
+        font-family: "Lato";
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-top: 50rem;
+        color: $color-white;
+        background-color: $color-black;
+        padding: 2rem 4rem 2rem 4rem;
+        clip-path: polygon(14% 49%, 0 68%, 14% 98%, 100% 74%, 88% 54%, 100% 26%, 0 8%);
+        animation: shake-btn-out .3s linear;
+
+    }
+
+    &__back-btn:hover,
+    &__back-btn:focus {
+        animation: shake-btn-in .3s linear forwards;
+    }
+
+    &__container {
+        min-height: 78.7vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+        grid-auto-rows: 35rem;
+        padding: 20rem;
+        @include respond(laptop) {
+            padding: 10rem
+            
+        }
+        @include respond(phone) {
+            grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+            padding: 3%;
+            padding-top: 10rem;
+            
+        }
+    }
+
+    &__item {
+        padding: 1rem;
+        transition: all .3s ease;
+        cursor: pointer;
+        &:hover {
+            transform: translateY(-.5rem);
+            filter: drop-shadow(0 .5rem 0.6rem $color-black);
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+}
+
+@keyframes shake-btn-in{
+    0% {
+        transform: translateX(-3px);
+    }
+    25% {
+        transform: translateX(3px);
+    }
+    50% {
+        transform: translateX(-3px);
+    }
+    75% {
+        transform: translateX(3px);
+    }
+    100% {
+        transform: translateX(-3px);
+        clip-path: polygon(0 45%, 11% 76%, 50% 67%, 96% 74%, 95% 22%, 49% 36%, 21% 30%);
+    }
+}
+
+@keyframes shake-btn-out{
+    from {
+        clip-path: polygon(0 45%, 11% 76%, 50% 67%, 96% 74%, 95% 22%, 49% 36%, 21% 30%);
+    } 
+    to {
+        clip-path: polygon(14% 49%, 0 68%, 14% 98%, 100% 74%, 88% 54%, 100% 26%, 0 8%);
+    }
+}
